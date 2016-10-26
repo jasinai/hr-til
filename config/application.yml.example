@@ -4,9 +4,10 @@ development: &default
   google_client_secret:
   heroku_production_app_name:
   host: 'www.example.com'
-  protocol: 'http://'
   permitted_domains: 'hashrocket.com|hshrckt.com|example.com'
   permitted_emails: 'johnsmith@whitelisted-guest.com'
+  protocol: 'http://'
+  site_name: 'Today I Learned'
   slack_post_endpoint:
   twitter_access_token:
   twitter_access_token_secret:

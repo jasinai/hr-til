@@ -14,7 +14,7 @@ class PostSlack::CreateSerializer < ActiveModel::Serializer
   def milestone_header
     published_posts_count = Post.published.reload.count
     if published_posts_count % 100 == 0 && !published_posts_count.zero?
-      "This is the #{published_posts_count}th post to #{SITE_NAME}! "
+      "This is the #{published_posts_count}th post to #{ENV.fetch('site_name')}! "
     end
   end
 

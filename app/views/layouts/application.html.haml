@@ -1,7 +1,7 @@
 !!! 5
 %html(lang="en-US")
   %head
-    %title= [content_for(:page_title), SITE_NAME].compact.join(' - ').html_safe
+    %title= [content_for(:page_title), ENV.fetch('site_name')].compact.join(' - ').html_safe
     = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application'
     = csrf_meta_tags
@@ -32,7 +32,7 @@
 
     %header.site_head
       %div
-        %h1= link_to SITE_NAME, root_path
+        %h1= link_to ENV.fetch('site_name'), root_path
         %h2= link_to "A Hashrocket project", "https://hashrocket.com"
 
     = render 'shared/flash'

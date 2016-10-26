@@ -1,5 +1,5 @@
 atom_feed do |feed|
-  feed.title SITE_NAME
+  feed.title ENV.fetch('site_name')
   feed.updated @posts.last.created_at
 
   @posts.each do |post|
